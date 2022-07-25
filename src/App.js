@@ -4,7 +4,6 @@ import { useState } from 'react'
 
 function App() {
   const fiveContact = contactsArr.filter((contact,index)=> index<5);
-console.log(fiveContact)
   const [contacts, setContact] = useState(fiveContact);
 
   const otherContacts = contactsArr.filter(contact=> fiveContact.indexOf(contact)<0);
@@ -12,7 +11,6 @@ console.log(fiveContact)
   
   const shallowCopyContact = [...contacts]
 
-console.log(otherContacts)
   const addRandom = () => {
     // const randomContact = otherContacts.splice(randomIndex,1)
     const addToContacts = shallowCopyContact.concat(otherContacts[randomIndex])
@@ -43,9 +41,11 @@ console.log(otherContacts)
   return (
     <div className="App">
       <h2>Iron Contacts</h2>
+      <div className='btns'>
       <button onClick={addRandom}>Add Random Contact</button>
       <button onClick={sortedByName}>Sort by Name</button>
       <button onClick={sortByPopularity}>Sort by Popularity</button>
+      </div>
       <table className="table">
         <thead className="table-header">
           <th>Picture</th>

@@ -1,35 +1,66 @@
 .App {
-  text-align: center;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(60, 60, 60);
 }
+
+h2{
+  color: rgb(255, 255, 255);
+}
+
 .table{
   border: 1px solid gray;
-  border-radius: 5px;
-  width:600px;
-  margin-left:35%;
+  border-radius: 10px;
+  width:700px;
   margin-top:30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(240, 240, 240);
 
 }
+
+.btns button,
+.table-content button{
+  margin-right: 30px;
+  background-color: rgb(163, 211, 228);
+  border-radius:8px;
+  border:none;
+  padding: 10px 20px;
+}
+
+.btns button:hover,
+.table-content button:hover{
+  background-color: rgb(65, 92, 94);
+  color:white;
+
+}
+
 
 .table img{
   width:100px;
-  border-radius: 50%;
+  border-radius: 10%;
   margin-bottom: 15px;
+  margin-left: 10px;
 }
-.table-header{
 
-border-bottom: 1px solid gray;
+.table-header{
+  display: flex;
+  justify-content: space-around;
+margin-right: 100px;
+padding: 10px 0;;
 }
-.table-header span{
-  margin-left: 20px;
-}
+
+
 
 .table-content{
-
-  border-bottom: 1px solid gray;
-  padding: 30px 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
-.table-content button{
+/* .table-content button{
   height: 30px;
   margin-right:10px;
-}
+} */
